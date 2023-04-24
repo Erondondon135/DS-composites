@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<h3 class="text-muted"><span style="color:#FFFFFF;"><span style="font-size: 12px;"><span style="font-family: Times New Roman,Times,serif;"><em>Композитные материалы</em></span></span></span></h3>
+<table align="center" bgcolor="#6fa8dc" border="3" cellpadding="5" cellspacing="5" dir="ltr" width="500px">
+	<tbody>
+		<tr>
+			<th align="center"><span style="font-family: Times New Roman,Times,serif;"><span style="color: #000000;"><span style="font-size: 18px;">Прогнозное значение параметра<br />
+			&laquo;Соотношение матрица-наполнитель&raquo;</span></span></span></th>
+		</tr>
+		<tr>
+			<th><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: #000000;">Заполните ячейки и нажмите &quot;Спрогнозировать&quot;</span></span></span></th>
+		</tr>
+	</tbody>
+</table>
+</head>
+ <body><table align="center" bgco lor="#6fa8dc" border="3" cellpadding="5" cellspacing="5" dir="ltr" width="500px">
+    <form action="{{url_for('app_calculation')}}" method="POST">
+<table align="center" bgcolor="#6fa8dc" border="3" bordercolor="#6fa8dc" cellpadding="5" cellspacing="5" width="500px">
+	<tbody>
+		<tr>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><label for="param1">Плотность, кг/м3</label></span></span></span></td>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input type="float" name="param1" placeholder="Заполните значение плотности, кг/м3" type="float" /></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><label for="param2">Модуль упругости, ГПа</label></span></span></span></td>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="param2" placeholder="Заполните значение модуля упругости, ГПа" type="float" /></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><label for="param3">Количество отвердителя, м.%</label> </span></span></span></td>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="param3" placeholder="Заполните значение количества отвердителя, м.%" type="float" /></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><label for="param4">Содержание эпоксидных групп,%_2</label> </span></span></span></td>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="param4" placeholder="Заполните значение содержания эпоксидных групп,%_2" type="float" /></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><label for="param5">Температура вспышки, С_2</label></span></span></span></td>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><input name="param5" placeholder="Заполните значение температуры вспышки, С_2" type="float" /></span></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><label for="param6">Поверхностная плотность, г/м2</label> </span></span></span></td>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="param6" placeholder="Заполните значение поверхностной плотности, г/м2" type="float" /></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><label for="param7">Модуль упругости при растяжении, ГПа</label></span></span></span></td>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="param7" placeholder="Заполните значение модуля упругости при растяжении, ГПа" type="float" /></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><label for="param8">Прочность при растяжении, МПа</label></span></span></span></td>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="param8" placeholder="Заполните значение прочности при растяжении, МПа" type="float" /></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><label for="param9">Потребление смолы, г/м2</label></span></span></span></td>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="param9" placeholder="Заполните значение потребления смолы, г/м2" type="float" /></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><label for="param10">Угол нашивки, град</label> </span></span></span></td>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="param10" placeholder="Заполните значение угла нашивки, град" type="float" /></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><label for="param11">Шаг нашивки</label></span></span></span></td>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="param11" placeholder="Заполните значение шага нашивки" type="float" /></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color:#000000;"><label for="param12">Плотность нашивки</label></span></span></span></td>
+			<td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="param12" placeholder="Заполните значение плотности нашивки" type="float" /></span></span></td>
+		</tr>
+	</tbody>
+</table>
+
+    
+<table align="center" bgcolor="#6fa8dc" border="3" cellpadding="5" cellspacing="5" width="500px">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><p>
+            <input type="submit" value="Спрогнозировать">
+            </p></span></span></span></span></td>
+		</tr>
+	</tbody>
+</table>
+<table align="center" bgcolor="#6fa8dc" border="3" cellpadding="5" cellspacing="5" width="500px">
+	<tbody>
+		<tr>
+			<th align="center"><span style="font-family: Times New Roman,Times,serif;"><span style="color: #000000;"><span style="font-size: 16px;">Результат прогноза:</span></span></span></th>
+		</tr>
+	</tbody>
+</table>
+</form>
+<table align="center" bgcolor="#6fa8dc" border="3" cellpadding="5" cellspacing="5" width="500px">
+	<tbody>
+		<tr>
+			<div class="message">
+			<th align="center"><span style="font-family: Times New Roman,Times,serif;"><span style="color: #000000;">{% if message %} </span></span><p><span style="font-family: Times New Roman,Times,serif;"><span style="color: #000000;">{{ message }}</span></span></p>
+			<span style="font-family: Times New Roman,Times,serif;"> <span style="color: #000000;">{% endif %} </span></span>
+			</div>
+			</th>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<p><span style="color:#FFFFFF;"><span style="font-family: Times New Roman,Times,serif;"><span class="footer"><em>Разработчик:</em></span></span> <span style="font-family: Times New Roman,Times,serif;"><span class="footer"><em><strong>Пестерев Михаил</strong></em></span></span> <span style="font-family: Times New Roman,Times,serif;"><span class="footer"></span></span> <span style="font-family: Times New Roman,Times,serif;"><span class="footer"></span></span></span></p>
+</div>
+
+<style type="text/css">body {
+    background-image: url("https://w.forfun.com/fetch/dc/dc917f3beedd1fed766dceda43a9ca1a.jpeg"); background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #6fa8dc; 
+   }
+</style>
